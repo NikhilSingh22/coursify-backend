@@ -39,7 +39,7 @@ export default app;
 
 app.get("/", (req, res) =>
   res.send(
-    `<h1>Site in working. click <a href=${process.env.FRONTEND_URL} to visite the frontend.</h1>`
+    `<h1>Site in working. click <a href=${process.env.FRONTEND_URL}></a> to visite the frontend.</h1>`
   )
 );
 
