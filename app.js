@@ -1,5 +1,6 @@
 import express from "express";
 import { config } from "dotenv";
+import ErrorMiddleware from "./middlewares/Error.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
@@ -28,7 +29,6 @@ app.use(
 // IMPORTING AND USING ROUTES
 import courseRoute from "./routes/courseRoutes.js";
 import userRoute from "./routes/userRoutes.js";
-import ErrorMiddleware from "./middlewares/Error.js";
 import other from "./routes/otherRoutes.js";
 
 app.use("/api/v1", courseRoute);
@@ -39,7 +39,7 @@ export default app;
 
 app.get("/", (req, res) =>
   res.send(
-    `<h1>Site in working. click <a href=${process.env.FRONTEND_URL}></a> to visite the frontend.</h1>`
+    `<h1>Site in working. click <a href=${process.env.FRONTEND_URL}>here</a> to visite the frontend.</h1>`
   )
 );
 
